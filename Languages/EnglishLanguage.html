@@ -28,11 +28,17 @@
       href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="../assets/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet" />
     <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
     <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
-    <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet" />
+    <link
+      href="../assets/vendor/simple-datatables/style.css"
+      rel="stylesheet"
+    />
 
     <!-- Template Main CSS File -->
     <link href="../assets/css/styleDahboard.css" rel="stylesheet" />
@@ -42,7 +48,10 @@
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
       <div class="d-flex align-items-center justify-content-between">
-        <a href="../index html/dashboard.html" class="logo d-flex align-items-center">
+        <a
+          href="../index html/dashboard.html"
+          class="logo d-flex align-items-center"
+        >
           <img src="../assets/img/quran.png" alt="" />
           <span class="d-none d-lg-block">QURANFORALL</span>
         </a>
@@ -133,10 +142,20 @@
         <!-- End Components Nav -->
 
         <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-target="#page-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-menu-button-wide"></i><span>Pages</span><i class="bi bi-chevron-down ms-auto"></i>
+          <a
+            class="nav-link collapsed"
+            data-bs-target="#page-nav"
+            data-bs-toggle="collapse"
+            href="#"
+          >
+            <i class="bi bi-menu-button-wide"></i><span>Pages</span
+            ><i class="bi bi-chevron-down ms-auto"></i>
           </a>
-          <ul id="page-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <ul
+            id="page-nav"
+            class="nav-content collapse"
+            data-bs-parent="#sidebar-nav"
+          >
             <li>
               <a href="../Pages/EnglishPage.html">
                 <i class="bi bi-circle"></i><span>English</span>
@@ -188,17 +207,23 @@
               </a>
             </li>
           </ul>
-        </li><!-- End Components Nav -->
+        </li>
+        <!-- End Components Nav -->
       </ul>
     </aside>
     <!-- End Sidebar-->
 
     <main id="main" class="main">
       <div class="pagetitle">
-        <h1>Dashboard</h1>
+        <div style="display: flex; justify-content: space-between">
+          <h1>Dashboard</h1>
+          <button class="btn btn-dark" onclick="uploadFiles()">Upload</button>
+        </div>
         <nav>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../index html/dashboard.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="../index html/dashboard.html">Home</a>
+            </li>
             <li class="breadcrumb-item active">Languages</li>
             <li class="breadcrumb-item active">
               <a href="../Languages/EnglishLanguage.html">English</a>
@@ -225,7 +250,7 @@
                       >Add PDF Files Only</label
                     >
                     <input
-                      class="form-control"
+                      class="form-control uploader-form"
                       type="file"
                       id="formFileMultiple"
                       multiple
@@ -247,7 +272,7 @@
                       >Add Image Files Only</label
                     >
                     <input
-                      class="form-control"
+                      class="form-control uploader-form"
                       type="file"
                       id="formFileMultiple"
                       multiple
@@ -269,7 +294,7 @@
                       >Add Video Files Only</label
                     >
                     <input
-                      class="form-control"
+                      class="form-control uploader-form"
                       type="file"
                       id="formFileMultiple"
                       multiple
@@ -289,6 +314,7 @@
                       <!-- Full Screen Modal -->
                       <button
                         type="button"
+                        onclick="viewFiles('pdf')"
                         class="btn btn-primary"
                         data-bs-toggle="modal"
                         data-bs-target="#enmodal1"
@@ -308,9 +334,19 @@
                                 aria-label="Close"
                               ></button>
                             </div>
-                            <div class="modal-body"></div>
+                            <div
+                              class="modal-body"
+                              style="display: flex; align-items: start"
+                            >
+                              <!-- <embed src="../analysis - ch7.pdf" type="" width="400" height="400">
+                              <embed src="../analysis - ch7.pdf" type="" width="400" height="400">
+                              <embed src="../analysis - ch7.pdf" type="" width="400" height="400">
+                              <embed src="../analysis - ch7.pdf" type="" width="400" height="400"> -->
+                            </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-danger">Delete</button>
+                              <button type="button" class="btn btn-danger">
+                                Delete
+                              </button>
                               <button
                                 type="button"
                                 class="btn btn-secondary"
@@ -337,6 +373,7 @@
                       <!-- Full Screen Modal -->
                       <button
                         type="button"
+                        onclick="viewFiles('img')"
                         class="btn btn-primary"
                         data-bs-toggle="modal"
                         data-bs-target="#enmodal2"
@@ -358,7 +395,9 @@
                             </div>
                             <div class="modal-body"></div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-danger">Delete</button>
+                              <button type="button" class="btn btn-danger">
+                                Delete
+                              </button>
                               <button
                                 type="button"
                                 class="btn btn-secondary"
@@ -385,6 +424,7 @@
                       <!-- Full Screen Modal -->
                       <button
                         type="button"
+                        onclick="viewFiles('vid')"
                         class="btn btn-primary"
                         data-bs-toggle="modal"
                         data-bs-target="#enmodal3"
@@ -406,7 +446,9 @@
                             </div>
                             <div class="modal-body"></div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-danger">Delete</button>
+                              <button type="button" class="btn btn-danger">
+                                Delete
+                              </button>
                               <button
                                 type="button"
                                 class="btn btn-secondary"
@@ -447,6 +489,32 @@
       ><i class="bi bi-arrow-up-short"></i
     ></a>
 
+    <!-- Firebase Storage  Upload Files-->
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAc90FvoQIHYy2EqeaN5AJvOxePvqgB_6U",
+        authDomain: "quranforall-d9daf.firebaseapp.com",
+        projectId: "quranforall-d9daf",
+        storageBucket: "quranforall-d9daf.appspot.com",
+        messagingSenderId: "852717807249",
+        appId: "1:852717807249:web:942e88c10429167fd70130",
+        measurementId: "G-6Y8K1WQPTG",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
     <!-- Vendor JS Files -->
     <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -459,5 +527,6 @@
 
     <!-- Template Main JS File -->
     <script src="../assets/js/mainDashboard.js"></script>
+    <script src="../assets/js/config.js"></script>
   </body>
 </html>
