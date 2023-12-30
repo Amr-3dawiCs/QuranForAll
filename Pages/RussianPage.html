@@ -43,6 +43,9 @@
 
     <!-- Template Main CSS File -->
     <link href="../assets/css/styleHome.css" rel="stylesheet" />
+    <script>
+      var lang = "rs";
+    </script>
   </head>
 
   <body>
@@ -79,7 +82,9 @@
             <li><a href="../Pages/SpanishPage.html">Spanish</a></li>
             <li><a href="../Pages/PersianPage.html">Persian</a></li>
             <li>
-              <a class="nav-link scrollto active" href="../Pages/RussianPage.html"
+              <a
+                class="nav-link scrollto active"
+                href="../Pages/RussianPage.html"
                 >Russian</a
               >
             </li>
@@ -116,6 +121,7 @@
                 <!-- Full Screen Modal -->
                 <button
                   type="button"
+                  onclick="viewFiles('pdf')"
                   class="btn btn-primary"
                   data-bs-toggle="modal"
                   data-bs-target="#rsmodal1"
@@ -135,7 +141,13 @@
                           aria-label="Close"
                         ></button>
                       </div>
-                      <div class="modal-body"></div>
+                      <div class="modal-body" id="pdf-rs"
+                      style="
+                        display: flex;
+                        width: 100vw;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                      "></div>
                       <div class="modal-footer">
                         <button
                           type="button"
@@ -163,6 +175,7 @@
                 <!-- Full Screen Modal -->
                 <button
                   type="button"
+                  onclick="viewFiles('img')"
                   class="btn btn-primary"
                   data-bs-toggle="modal"
                   data-bs-target="#rsmodal2"
@@ -182,7 +195,16 @@
                           aria-label="Close"
                         ></button>
                       </div>
-                      <div class="modal-body"></div>
+                      <div
+                        class="modal-body"
+                        id="img-rs"
+                        style="
+                          display: flex;
+                          width: 100vw;
+                          flex-wrap: wrap;
+                          gap: 10px;
+                        "
+                      ></div>
                       <div class="modal-footer">
                         <button
                           type="button"
@@ -210,6 +232,7 @@
                 <!-- Full Screen Modal -->
                 <button
                   type="button"
+                  onclick="viewFiles('vid')"
                   class="btn btn-primary"
                   data-bs-toggle="modal"
                   data-bs-target="#rsmodal3"
@@ -229,7 +252,16 @@
                           aria-label="Close"
                         ></button>
                       </div>
-                      <div class="modal-body"></div>
+                      <div
+                        class="modal-body"
+                        id="vid-rs"
+                        style="
+                          display: flex;
+                          width: 100vw;
+                          flex-wrap: wrap;
+                          gap: 10px;
+                        "
+                      ></div>
                       <div class="modal-footer">
                         <button
                           type="button"

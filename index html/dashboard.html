@@ -93,8 +93,9 @@
       <li class="nav-item">
         <a class="nav-link " href="../index html/dashboard.html">
           <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
+          <span style="padding-bottom: 10px;">Dashboard</span>
         </a>
+        <a class="nav-link" href="../index html/homepage.html" style="padding-left: 16px; "><i class="bi bi-house"></i> <span style="padding-left: 4px; padding-top: 10px; padding-bottom: 10px;">Home Page</span></a>
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
@@ -248,8 +249,8 @@
                           <div class="border rounded p-1">
                             <div class="border rounded text-center p-4">
                               <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                              <h2 class="mb-1" data-toggle="counter-up">12</h2>
-                              <p class="mb-0">PDF Files</p>
+                              <h2 class="mb-1 countpdf" data-toggle="counter-up"></h2>
+                              <p class="mb-0"><i class="bi bi-filetype-pdf"></i>  PDF Files</p>
                             </div>
                           </div>
                         </div>
@@ -258,18 +259,58 @@
                           <div class="border rounded p-1">
                             <div class="border rounded text-center p-4">
                               <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                              <h2 class="mb-1" data-toggle="counter-up">12</h2>
-                              <p class="mb-0">Image Files</p>
+                              <h2 class="mb-1 countimg" data-toggle="counter-up"></h2>
+                              <p class="mb-0"><i class="bi bi-file-image"></i>  Image Files</p>
                             </div>
                           </div>
                         </div>
             
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" style="padding-bottom: 20px;">
                           <div class="border rounded p-1">
                             <div class="border rounded text-center p-4">
                               <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                              <h2 class="mb-1" data-toggle="counter-up">12</h2>
-                              <p class="mb-0">Video Files</p>
+                              <h2 class="mb-1 countvid" data-toggle="counter-up"></h2>
+                              <p class="mb-0"><i class="bi bi-file-earmark-play"></i>  Video Files</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="button" onclick="deleteFiles()" class="btn btn-danger">
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End PDF Files Card -->
+
+            <!-- Reports (Visitors and Downloads ) -->
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-sm-12">
+                  <div class="card info-card sales-card animate__animated animate__fadeIn">
+                    <div class="card-body">
+                      <h5 class="card-title"><i class="bi bi-receipt-cutoff"></i> Reports </h5>
+            
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="border rounded p-1">
+                            <div class="border rounded text-center p-4">
+                              <i class="fa fa-users fa-2x text-primary mb-2"></i>
+                              <h2 class="mb-1" data-toggle="counter-up"></h2>
+                              <p class="mb-0"><i class="bi bi-people-fill visitor"></i>  Visitors</p>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <div class="col-sm-6">
+                          <div class="border rounded p-1">
+                            <div class="border rounded text-center p-4">
+                              <i class="fa fa-users fa-2x text-primary mb-2"></i>
+                              <h2 class="mb-1 countTotal" data-toggle="counter-up"> <!-- api--></h2>
+                              <p class="mb-0"><i class="bi bi-download  totaldownload"></i>  Downloads</p>
                             </div>
                           </div>
                         </div>
@@ -279,18 +320,14 @@
                 </div>
               </div>
             </div>
-            <!-- End PDF Files Card -->
-
-            
 
             <!-- Visitor Reports -->
-            <div class="col-12 animate__animated animate__fadeIn">
+            <!-- <div class="col-12 animate__animated animate__fadeIn">
               <div class="card">
 
                 <div class="card-body">
                   <h5 class="card-title">Reports <span>/Visitors</span></h5>
 
-                  <!-- Line Chart -->
               <canvas id="lineChart" style="max-height: 400px;"></canvas>
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
@@ -316,23 +353,24 @@
                   });
                 });
               </script>
-              <!-- End Line CHart -->
 
                 </div>
 
               </div>
-            </div><!-- End Reports -->
+            </div> -->
+
+
+
+            <!-- End  Visitors Reports -->
 
 
 
             <!-- Download Reports -->
-            <div class="col-12 animate__animated animate__fadeIn">
+            <!-- <div class="col-12 animate__animated animate__fadeIn">
               <div class="card">
 
                 <div class="card-body">
                   <h5 class="card-title">Reports <span>/Downloads</span></h5>
-
-                  <!-- Bar Chart -->
               <canvas id="barChart" style="max-height: 400px;"></canvas>
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
@@ -374,12 +412,13 @@
                   });
                 });
               </script>
-              <!-- End Bar CHart -->
-
                 </div>
 
               </div>
-            </div><!-- End Reports -->
+            </div> -->
+
+
+            <!-- End Reports -->
 
           </div>
         </div><!-- End Left side columns -->
@@ -425,7 +464,9 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/mainDashboard.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
   <script src="../assets/js/config.js"></script>
+  <!-- <script src="../assets/js/authentication.js"></script> -->
 
 </body>
 

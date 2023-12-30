@@ -50,13 +50,9 @@
     <!-- Template Main CSS File -->
     <link href="../assets/css/styleDahboard.css" rel="stylesheet" />
 
-    <!-- =======================================================
-  * Template Name: NiceAdmin
-  * Updated: Nov 17 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <script>
+      var lang = "it";
+    </script>
   </head>
   <body>
     <!-- ======= Header ======= -->
@@ -83,6 +79,7 @@
             <i class="bi bi-grid"></i>
             <span>Dashboard</span>
           </a>
+          <a class="nav-link" href="../index html/homepage.html" style="padding-left: 16px; "><i class="bi bi-house"></i> <span style="padding-left: 4px; padding-top: 10px; padding-bottom: 10px;">Home Page</span></a>
         </li>
         <!-- End Dashboard Nav -->
 
@@ -348,11 +345,17 @@
                                 aria-label="Close"
                               ></button>
                             </div>
-                            <div class="modal-body"></div>
+                            <div
+                              class="modal-body"
+                              id="pdf-it"
+                              style="
+                                display: flex;
+                                width: 100vw;
+                                flex-wrap: wrap;
+                                gap: 10px;
+                              "
+                            ></div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-danger">
-                                Delete
-                              </button>
                               <button
                                 type="button"
                                 class="btn btn-secondary"
@@ -399,11 +402,17 @@
                                 aria-label="Close"
                               ></button>
                             </div>
-                            <div class="modal-body"></div>
+                            <div
+                              class="modal-body"
+                              id="img-it"
+                              style="
+                                display: flex;
+                                width: 100vw;
+                                flex-wrap: wrap;
+                                gap: 10px;
+                              "
+                            ></div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-danger">
-                                Delete
-                              </button>
                               <button
                                 type="button"
                                 class="btn btn-secondary"
@@ -450,11 +459,14 @@
                                 aria-label="Close"
                               ></button>
                             </div>
-                            <div class="modal-body"></div>
+                            <div class="modal-body"id="vid-it"
+                            style="
+                              display: flex;
+                              width: 100vw;
+                              flex-wrap: wrap;
+                              gap: 10px;
+                            "></div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-danger">
-                                Delete
-                              </button>
                               <button
                                 type="button"
                                 class="btn btn-secondary"
@@ -534,5 +546,6 @@
     <!-- Template Main JS File -->
     <script src="../assets/js/mainDashboard.js"></script>
     <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/authentication.js"></script>
   </body>
 </html>

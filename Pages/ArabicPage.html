@@ -44,6 +44,9 @@
     <!-- Template Main CSS File -->
     <link href="../assets/css/styleHome.css" rel="stylesheet" />
   </head>
+  <script>
+    var lang = 'ar';
+  </script>
 
   <body>
     <!-- ======= Top Bar ======= -->
@@ -119,6 +122,7 @@
                     <!-- Full Screen Modal -->
                     <button
                       type="button"
+                      onclick="viewFiles('pdf')"
                       class="btn btn-primary"
                       data-bs-toggle="modal"
                       data-bs-target="#armodal1"
@@ -137,7 +141,13 @@
                               aria-label="Close"
                             ></button>
                           </div>
-                          <div class="modal-body">
+                          <div class="modal-body" id="pdf-ar"
+                          style="
+                            display: flex;
+                            width: 100vw;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                          ">
                             <!-- PDF File Content Goes Here -->
                           </div>
                           <div class="modal-footer">
@@ -166,6 +176,7 @@
                     <!-- Full Screen Modal -->
                     <button
                       type="button"
+                      onclick="viewFiles('img')"
                       class="btn btn-primary"
                       data-bs-toggle="modal"
                       data-bs-target="#armodal2"
@@ -184,7 +195,13 @@
                               aria-label="Close"
                             ></button>
                           </div>
-                          <div class="modal-body">
+                          <div class="modal-body" id="img-ar"
+                          style="
+                            display: flex;
+                            width: 100vw;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                          ">
                             <!-- Image File Content Goes Here -->
                           </div>
                           <div class="modal-footer">
@@ -213,6 +230,7 @@
                     <!-- Full Screen Modal -->
                     <button
                       type="button"
+                      onclick="viewFiles('vid')"
                       class="btn btn-primary"
                       data-bs-toggle="modal"
                       data-bs-target="#armodal3"
@@ -231,7 +249,13 @@
                               aria-label="Close"
                             ></button>
                           </div>
-                          <div class="modal-body">
+                          <div class="modal-body" id="vid-ar"
+                          style="
+                            display: flex;
+                            width: 100vw;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                          ">
                             <!-- Video File Content Goes Here -->
                           </div>
                           <div class="modal-footer">

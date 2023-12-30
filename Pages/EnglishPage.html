@@ -50,25 +50,12 @@
 
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href="../assets/css/styleHome.css" />
+    <script>
+      var lang = "en";
+    </script>
   </head>
 
   <body>
-    <!-- ======= Top Bar ======= -->
-    <!-- <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-      </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div>
-  </section> -->
-
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
@@ -81,7 +68,9 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li>
-              <a class="nav-link scrollto active" href="../Pages/EnglishPage.html"
+              <a
+                class="nav-link scrollto active"
+                href="../Pages/EnglishPage.html"
                 >English</a
               >
             </li>
@@ -122,6 +111,7 @@
                   <!-- Full Screen Modal -->
                   <button
                     type="button"
+                    onclick="viewFiles('pdf')"
                     class="btn btn-primary"
                     data-toggle="modal"
                     data-target="#enmodal1"
@@ -141,7 +131,16 @@
                             aria-label="Close"
                           ></button>
                         </div>
-                        <div class="modal-body"></div>
+                        <div
+                          class="modal-body"
+                          id="pdf-en"
+                          style="
+                            display: flex;
+                            width: 100vw;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                          "
+                        ></div>
                         <div class="modal-footer">
                           <button
                             type="button"
@@ -169,6 +168,7 @@
                   <!-- Full Screen Modal -->
                   <button
                     type="button"
+                    onclick="viewFiles('img')"
                     class="btn btn-primary"
                     data-toggle="modal"
                     data-target="#enmodal2"
@@ -177,7 +177,7 @@
                   </button>
 
                   <div class="modal fade" id="enmodal2" tabindex="-1">
-                    <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-dialog modal-fullscreen ">
                       <div class="modal-content">
                         <div class="modal-header">
                           <h5 class="modal-title">Image Files</h5>
@@ -188,7 +188,16 @@
                             aria-label="Close"
                           ></button>
                         </div>
-                        <div class="modal-body"></div>
+                        <div
+                          class="modal-body"
+                          id="img-en"
+                          style="
+                            display: flex;
+                            width: 100vw;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                          "
+                        ></div>
                         <div class="modal-footer">
                           <button
                             type="button"
@@ -216,6 +225,7 @@
                   <!-- Full Screen Modal -->
                   <button
                     type="button"
+                    onclick="viewFiles('vid')"
                     class="btn btn-primary"
                     data-toggle="modal"
                     data-target="#enmodal3"
@@ -235,7 +245,16 @@
                             aria-label="Close"
                           ></button>
                         </div>
-                        <div class="modal-body"></div>
+                        <div
+                          class="modal-body"
+                          id="vid-en"
+                          style="
+                            display: flex;
+                            width: 100vw;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                          "
+                        ></div>
                         <div class="modal-footer">
                           <button
                             type="button"
