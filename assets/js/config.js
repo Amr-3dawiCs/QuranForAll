@@ -35,11 +35,8 @@ function displayFiles(files, type) {
     const fileTypeIcon = getFileTypeIcon(file.fileType);
     const modalId = `${lang}modal${index + 1}`;
 
-    // Create a card for each file
-    const fileCard = document.createElement("div");
-    fileCard.classList.add("col-md-4");
-    if(file.fileType == 'img' ){
-      fileCard.innerHTML = `
+
+/* 
     <div class="wrap" style="width: 400px;
     height: 600px;
     padding: 0;
@@ -48,13 +45,33 @@ function displayFiles(files, type) {
     height: 1800px;
     border: 0;">
     </div>
+*/
+
+
+
+
+    // Create a card for each file
+    const fileCard = document.createElement("div");
+    fileCard.classList.add("col-md-4");
+    //  <img src ="${file.url}" width="20%" height="auto" controls></img>
+    if(files[0].fileType == 'img' ){
+      console.log(files[0].fileType);
+      fileCard.innerHTML = `
+     
+  <img src="${file.url}" width="20%" height="auto" alt="Image">
+
     `;
       
-    }else{
+    }else if(files[0].fileType == 'vid'){
+      console.log(files[0].fileType);
       fileCard.innerHTML = `
-    
-    <iframe src="${file.url}" style=" width: 1200px;
-    height: 1800px;
+    <video class="col-sm-5" src="${file.url}" width="40%" height="auto" controls></video>
+    `;
+    }else{
+      console.log(files[0].fileType);
+      fileCard.innerHTML = `
+    <iframe src="${file.url}" style=" width: 400px;
+    height: 400px;
     border: 0;">
     `;
     }
